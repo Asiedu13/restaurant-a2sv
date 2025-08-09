@@ -1,6 +1,5 @@
 "use client"
 import { useState } from "react";
-// import { FaMotorcycle, FaLock, FaSearch } from "react-icons/fa";
 
 export function RestaurantMealSearch() {
     const [mode, setMode] = useState<"delivery" | "pickup">("delivery");
@@ -17,7 +16,6 @@ export function RestaurantMealSearch() {
                                 : "text-gray-500 hover:text-gray-700"
                         }`}
                     >
-                        {/*<FaMotorcycle className="text-lg"/>*/}
                         <span className="icon-[fa--motorcycle]"></span>
                         Delivery
                     </button>
@@ -29,7 +27,6 @@ export function RestaurantMealSearch() {
                                 : "text-gray-500 hover:text-gray-700"
                         }`}
                     >
-                        {/*<FaLock className="text-lg" />*/}
                         <span className="icon-[fa7-solid--shopping-bag]"></span>
                         Pickup
                     </button>
