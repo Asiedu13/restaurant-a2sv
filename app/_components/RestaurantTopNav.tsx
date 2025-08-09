@@ -16,7 +16,6 @@ export function RestaurantTopNav() {
                     </button>
                 </div>
             </RestaurantContainer>
-            <RestaurantHeader/>
         </nav>
     )
 }

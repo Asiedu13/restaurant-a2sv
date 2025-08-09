@@ -18,7 +18,7 @@ export function RestaurantHeader() {
                         </div>
                     </div>
                     <div className="flex justify-center relative">
-                        <Image src={Noodles} alt="Noodles in a black bowl" width={497} height={497} className="absolute top-40"/>
+                        <Image src={Noodles} alt="Noodles in a black bowl" width={497} height={497} className="absolute top-31"/>
                         <div
                             className="bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-teal-300 via-gray-100 to-blue-300"></div>
                     </div>

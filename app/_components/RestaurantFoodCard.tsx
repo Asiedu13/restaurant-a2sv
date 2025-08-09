@@ -1,36 +1,45 @@
 "use client";
+import Image from 'next/image'
 
 import { useState } from "react";
-export default function RestaurantFoodCard() {
+export default function RestaurantFoodCard({currentMeal}) {
     const [menuOpen, setMenuOpen] = useState(false);
+    const formattedPrice = currentMeal?.Price.toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD",
+    });
 
     return (
         <div className="bg-white rounded-xl shadow-md overflow-hidden w-60 font-sourceSans relative">
             <div className="relative">
-                <img
-                    src="/images/avocado-smoothie.jpg"
+                <Image
+                    src={currentMeal?.avatar}
                     alt="Mixed Avocado Smoothie"
                     className="w-full h-36 object-cover"
+                    width={357}
+                    height={301}
                 />
                 <div className="absolute top-2 left-2 bg-orange-500 text-white text-sm font-semibold px-2 py-1 rounded-md flex items-center gap-1">
                     <span className="icon-[fa7-solid--tag]"></span>
-                    $5.99
+                    {formattedPrice}
                 </div>
             </div>
 
             <div className="p-3">
                 <div className="flex items-start justify-between">
                     <div className="flex items-center gap-2">
-                        <img
-                            src="/images/pizza-pino-logo.png"
+                        <Image
+                            src={currentMeal?.logo}
                             alt="Pizza Pino"
                             className="w-10 h-10 rounded-md object-cover"
+                            width={64}
+                            height={64}
                         />
                         <div>
                             <h3 className="text-sm font-semibold">Mixed Avocado Sm...</h3>
                             <div className="flex items-center text-yellow-500 text-sm">
                                 <span className="icon-[fa7-solid--star] mr-1"></span>
-                                4.0
+                                {currentMeal?.rating}
                             </div>
                         </div>
                     </div>
