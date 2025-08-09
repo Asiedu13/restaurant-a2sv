@@ -30,13 +30,13 @@ export default function RestaurantFoodCard({currentMeal}) {
                     <div className="flex items-center gap-2">
                         <Image
                             src={currentMeal?.logo}
-                            alt="Pizza Pino"
+                            alt={currentMeal?.name}
                             className="w-10 h-10 rounded-md object-cover"
                             width={64}
                             height={64}
                         />
                         <div>
-                            <h3 className="text-sm font-semibold">Mixed Avocado Sm...</h3>
+                            <h3 className="text-sm font-semibold">{currentMeal?.name}</h3>
                             <div className="flex items-center text-yellow-500 text-sm">
                                 <span className="icon-[fa7-solid--star] mr-1"></span>
                                 {currentMeal?.rating}
